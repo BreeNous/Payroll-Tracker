@@ -1,10 +1,71 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Collect employee data
+// TODO: Get user input to create and return an array of employee objects
+
+
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
-}
+
+  let employeeObj = {
+    firstName: "",
+    lastName: "",
+    salary: 0
+  }
+  
+  function containsNumbers(input) {
+    for (let i = 0; i < input.length; i++) {
+      if (!isNaN(parseInt(input[i]))) {
+        return true
+      }
+    }
+    return false;
+  }
+
+  while (true) {
+    employeeObj.firstName = prompt("Enter the employee's first name.");
+    if (employeeObj.firstName.trim() !== "" && !containsNumbers(employeeObj.firstName)) {
+      break;
+    } else {
+      confirm("Please enter a valid first name")
+    }
+    return employeeObj;
+  }
+
+  while (true) {
+    employeeObj.lastName = prompt("Enter the employee's last name.");
+    if (employeeObj.lastName.trim() !== "" && !containsNumbers(employeeObj.lastName)) {
+      break;
+    } else {
+      confirm("Please enter a valid last name")
+    }
+    return employeeObj;
+  }
+
+  while (true) {
+    employeeObj.salary = prompt("Enter the employee's salary");
+    if (employeeObj.salary.trim() !== "" && containsNumbers(employeeObj.salary)) {
+      break;
+    } else {
+      confirm("Please enter a valid salary")
+    }
+    return employeeObj;
+  }
+
+  
+
+  let employeesArray = []
+    if (employeesArray.length === 0) {
+      employeesArray = [employeeObj];
+    } else {
+      employeesArray.push(employeeObj);
+    }
+    return employeesArray;
+};
+
+
+
+
+
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
@@ -15,6 +76,12 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 }
+
+
+
+
+
+
 
 /*
   ====================
