@@ -86,7 +86,7 @@ const getRandomEmployee = function(employeesArray) {
     let randomObject = employeesArray[Math.floor(Math.random() * employeesArray.length)];
     let first = randomObject.firstName;
     let last = randomObject.lastName;
-    console.log(`The random employee is ${first} ${last}`)
+    console.log(`CONGRATULATIONS, ${first} ${last}, you are the winner of the random drawing!`)
 }
 
 
