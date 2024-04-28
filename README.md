@@ -39,4 +39,4 @@ If the user wants to see the average salary and who the winner of the random dra
 <img width="1506" alt="uasge07" src="https://github.com/BreeNous/Payroll-Tracker/assets/163676639/34bb277f-2a25-4abc-b2ee-9d4b858f715c">
 
 ## Credits
-
+UCF coding bootcamp supplied the starter code.
