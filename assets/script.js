@@ -64,14 +64,8 @@ const collectEmployees = function() {
       break
     }
   } 
-  
   return employeesArray
 }
-
-
-
-
-
 
 // The "displayAverageSalary" function is taking in all the properties of each object that provide a "salary" property value
 // .reduce is then going to add all the salary values together
@@ -86,7 +80,6 @@ const displayAverageSalary = function(employeesArray) {
   let divideSum = sum / employeesArray.length;
   console.log(`The average salary between all employee's is: ${divideSum}`);
 }
-
 
 // The "getRandomEmployee" function is taking all the objects within the array and selecting a random one using the Math.random()
 // which is multiplied by the length of the array to give it a value between 0 and the total ammount of objects rather than a number between 0
