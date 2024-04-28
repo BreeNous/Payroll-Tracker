@@ -1,9 +1,14 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// TODO: Get user input to create and return an array of employee objects
-
-
+// This section of code that is enveloped in a while loop with more while loops inside it serves as the gatherer
+// of employee data. The while loops inside the main one check that the user input meets a set criteria before
+// allowing the user to progress and before the prompt value is passed on through the function. The function
+// "containsNubers" is used to check is a inputed value has numbers or not to then be used within the while loops.
+// The main while loop represents what to do if the user wants to add another employee or not, and if they do,
+// it will execute all the code again thats within the loop so another employee and their data can be collected.
+// the .push right before the end of the main while loop will allow the new object to be saved and added to the array
+// in the case that the main while loop needs to be executed again.
 const collectEmployees = function() {
 
   let employeesArray = []
@@ -68,8 +73,11 @@ const collectEmployees = function() {
 
 
 
-// Display the average salary
-  // TODO: Calculate and display the average salary
+// The "displayAverageSalary" function is taking in all the properties of each object that provide a "salary" property value
+// .reduce is then going to add all the salary values together
+// then the divideSum variabe will get the sum divided by the ammout of instances where a salary property will be in the array
+// since each object contains a salary value, I used the ammount of objects that exist within the array to get the number
+// that the sum should be divided by.
 const displayAverageSalary = function(employeesArray) {
   let salaryValue = 'salary'
   let sum = employeesArray.reduce((valueTotal, itemValue) => {
@@ -80,20 +88,16 @@ const displayAverageSalary = function(employeesArray) {
 }
 
 
-// Select a random employee
- // TODO: Select and display a random employee
+// The "getRandomEmployee" function is taking all the objects within the array and selecting a random one using the Math.random()
+// which is multiplied by the length of the array to give it a value between 0 and the total ammount of objects rather than a number between 0
+// and 1. Then the first name and last name values are retreived from the randomObject that represents one of the objects within the array
+// and are placed as string literals in the string that the console is logging.
 const getRandomEmployee = function(employeesArray) {
     let randomObject = employeesArray[Math.floor(Math.random() * employeesArray.length)];
     let first = randomObject.firstName;
     let last = randomObject.lastName;
     console.log(`CONGRATULATIONS, ${first} ${last}, you are the winner of the random drawing!`)
 }
-
-
-
-
-
-
 
 /*
   ====================
